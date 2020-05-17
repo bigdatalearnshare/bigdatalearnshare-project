@@ -21,3 +21,6 @@ buildNumber.properties
 .AppleDouble
 .LSOverride
 
+/bigdata-project/src/main/resources/core-site.xml
+/bigdata-project/src/main/resources/hdfs-site.xml
+/bigdata-project/src/main/resources/hive-site.xml

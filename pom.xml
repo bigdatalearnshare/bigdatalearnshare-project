@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
 
-    <name>BigData Project</name>
-    <url>https://github.com/bigdatalearnshare/bigdata-project</url>
+    <name>BigdataLearnShare Project</name>
+    <url>https://github.com/bigdatalearnshare/bigdatalearnshare-project</url>
     <description>
 
     </description>
@@ -117,14 +117,14 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_${scala.binary.version}</artifactId>
+            <artifactId>spark-sql_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.provided}</scope>
         </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_${scala.binary.version}</artifactId>
+            <artifactId>spark-hive_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.provided}</scope>
         </dependency>
@@ -147,6 +147,27 @@
             <artifactId>spark-catalyst_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.provided}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.crealytics</groupId>
+            <artifactId>spark-excel_${scala.binary.version}</artifactId>
+            <version>0.11.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-compress</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.scala-lang</groupId>
+                    <artifactId>scala-library</artifactId>
+                </exclusion>
+            </exclusions>
+
         </dependency>
 
 
@@ -181,14 +202,43 @@
                     <groupId>org.jruby</groupId>
                     <artifactId>jruby-complete</artifactId>
                 </exclusion>
+
+                <!-- 与hadoop-client 2.6.4冲突 -->
+                <exclusion>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-common</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-mapreduce-client-core</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
+
+        <!--<dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-server</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase</artifactId>
+            <version>${hbase.version}</version>
+            <type>pom</type>
+        </dependency>-->
 
 
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
-            <version>2.6.0</version>
+            <version>${hadoop-client-version}</version>
             <scope>${scope.provided}</scope>
         </dependency>
 
@@ -264,6 +314,9 @@
 
 
     <build>
+        <!-- 将打包生成的jar包名固定为bigdatalearnshare, [产生的构件的文件名默认是${artifactId}-${version}] -->
+        <finalName>bigdatalearnshare-project</finalName>
+
         <sourceDirectory>src/main/java/</sourceDirectory>
         <resources>
             <resource>
@@ -271,6 +324,25 @@
             </resource>
         </resources>
         <plugins>
+
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <verbose>true</verbose>
+                    <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+                    <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                    <generateGitPropertiesFilename>${basedir}/src/main/resources/git-info.properties</generateGitPropertiesFilename>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

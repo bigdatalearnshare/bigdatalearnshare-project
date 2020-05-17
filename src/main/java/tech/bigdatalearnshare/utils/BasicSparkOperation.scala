@@ -10,12 +10,13 @@ trait BasicSparkOperation {
 
   val warehouseLocation = "spark-warehouse"
 
-  System.setProperty("HADOOP_USER_NAME", "root")
+  //System.setProperty("HADOOP_USER_NAME", "root")
 
   def getOrCreateSparkSessionWithLocal(): SparkSession = {
     SparkSession
       .builder()
       .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
+      .appName("with_local")
       .master("local[*]")
       .getOrCreate()
   }
@@ -26,6 +27,7 @@ trait BasicSparkOperation {
       .config("spark.sql.warehouse.dir", warehouseLocation)
       .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
       .enableHiveSupport()
+      .appName("with_hive")
       .master("local[*]")
       .getOrCreate()
   }
