@@ -3,7 +3,7 @@ package tech.bigdatalearnshare.utils
 import org.apache.spark.sql.SparkSession
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-04
   */
 trait BasicSparkOperation {

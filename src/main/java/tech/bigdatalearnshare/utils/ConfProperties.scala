@@ -1,7 +1,7 @@
 package tech.bigdatalearnshare.utils
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-09
   */
 object ConfProperties {

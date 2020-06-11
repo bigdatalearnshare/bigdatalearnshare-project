@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils
 import org.slf4j.LoggerFactory
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-09
   */
 object PropertyUtils {

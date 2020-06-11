@@ -3,7 +3,7 @@ package tech.bigdatalearnshare.utils
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-09
   */
 object SpringUtils {

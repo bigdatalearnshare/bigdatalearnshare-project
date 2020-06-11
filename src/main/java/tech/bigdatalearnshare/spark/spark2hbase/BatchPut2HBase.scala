@@ -6,10 +6,11 @@ import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.hbase.{HBaseConfiguration, TableName}
 import tech.bigdatalearnshare.utils.{BasicSparkOperation, ConfProperties}
 
+import scala.collection.JavaConversions._
 import scala.util.Try
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-04
   */
 object BatchPut2HBase extends BasicSparkOperation {

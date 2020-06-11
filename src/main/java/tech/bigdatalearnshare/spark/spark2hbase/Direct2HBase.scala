@@ -9,7 +9,7 @@ import tech.bigdatalearnshare.spark.spark2hbase.BatchPut2HBase.getOrCreateSparkS
 import tech.bigdatalearnshare.utils.ConfProperties
 
 /**
-  * @Author fjs
+  * @Author bigdatalearnshare
   * @Date 2020-05-04
   */
 object Direct2HBase {
