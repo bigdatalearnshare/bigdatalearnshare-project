@@ -1,4 +1,4 @@
-package tech.bigdatalearnshare.utils
+package tech.bigdatalearnshare.recommendation.utils
 
 import org.slf4j.LoggerFactory
 import redis.clients.jedis.{Jedis, JedisPool, JedisPoolConfig}

@@ -5,8 +5,8 @@ import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.hbase.mapreduce.TableOutputFormat
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.mapreduce.Job
+import tech.bigdatalearnshare.recommendation.utils.ConfProperties
 import tech.bigdatalearnshare.spark.spark2hbase.BatchPut2HBase.getOrCreateSparkSessionWithLocal
-import tech.bigdatalearnshare.utils.ConfProperties
 
 /**
   * @Author bigdatalearnshare

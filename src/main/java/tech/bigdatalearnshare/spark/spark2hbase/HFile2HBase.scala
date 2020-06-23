@@ -8,8 +8,8 @@ import org.apache.hadoop.hbase.mapreduce.{HFileOutputFormat2, LoadIncrementalHFi
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.mapreduce.Job
 import org.apache.spark.sql.SparkSession
+import tech.bigdatalearnshare.recommendation.utils.ConfProperties
 import tech.bigdatalearnshare.spark.spark2hbase.BatchPut2HBase.getOrCreateSparkSessionWithLocal
-import tech.bigdatalearnshare.utils.ConfProperties
 
 /**
   * @Author bigdatalearnshare

@@ -4,7 +4,8 @@ import org.apache.hadoop.hbase.client.{ConnectionFactory, Put}
 import org.apache.hadoop.hbase.mapreduce.TableOutputFormat
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.hbase.{HBaseConfiguration, TableName}
-import tech.bigdatalearnshare.utils.{BasicSparkOperation, ConfProperties}
+import tech.bigdatalearnshare.recommendation.utils.{BasicSparkOperation, ConfProperties}
+import tech.bigdatalearnshare.utils.ConfProperties
 
 import scala.collection.JavaConversions._
 import scala.util.Try

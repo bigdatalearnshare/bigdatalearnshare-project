@@ -1,5 +1,5 @@
 import org.scalatest.FlatSpec
-import tech.bigdatalearnshare.utils.ConfProperties
+import tech.bigdatalearnshare.recommendation.utils.ConfProperties
 
 /**
   * @Author fjs

@@ -1,6 +1,6 @@
 package tech.bigdatalearnshare.spark.datasource
 
-import tech.bigdatalearnshare.utils.BasicSparkOperation
+import tech.bigdatalearnshare.recommendation.utils.BasicSparkOperation
 
 /**
   * @Author bigdatalearnshare

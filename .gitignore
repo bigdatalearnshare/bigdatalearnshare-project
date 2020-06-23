@@ -21,10 +21,10 @@ buildNumber.properties
 .AppleDouble
 .LSOverride
 
-/bigdata-project/src/main/resources/core-site.xml
-/bigdata-project/src/main/resources/hdfs-site.xml
-/bigdata-project/src/main/resources/hive-site.xml
+/bigdatalearnshare-project/src/main/resources/core-site.xml
+/bigdatalearnshare-project/src/main/resources/hdfs-site.xml
+/bigdatalearnshare-project/src/main/resources/hive-site.xml
 
-/bigdata-project/spark-recommendation-system/src/main/resources/core-site.xml
-/bigdata-project/spark-recommendation-system/src/main/resources/hdfs-site.xml
-/bigdata-project/spark-recommendation-system/src/main/resources/hive-site.xml
+/bigdatalearnshare-project/spark-recommendation-system/src/main/resources/core-site.xml
+/bigdatalearnshare-project/spark-recommendation-system/src/main/resources/hdfs-site.xml
+/bigdatalearnshare-project/spark-recommendation-system/src/main/resources/hive-site.xml

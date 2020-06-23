@@ -1,4 +1,4 @@
-package tech.bigdatalearnshare.utils
+package tech.bigdatalearnshare.recommendation.utils
 
 import org.apache.spark.sql.SparkSession
 
