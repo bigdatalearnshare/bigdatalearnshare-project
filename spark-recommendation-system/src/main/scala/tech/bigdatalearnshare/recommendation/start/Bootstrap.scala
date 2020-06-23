@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory
 import tech.bigdatalearnshare.recommendation.producer.ProducerJ
 import tech.bigdatalearnshare.recommendation.utils.{Const, SpringUtils}
 
+/**
+  * @Author bigdatalearnshare
+  * @Date 2018-05-13
+  */
 object Bootstrap {
 
   private val log = LoggerFactory.getLogger(Bootstrap.getClass)
