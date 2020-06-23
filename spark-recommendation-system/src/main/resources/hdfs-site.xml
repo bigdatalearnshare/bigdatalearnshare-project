@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<!--Namenode运行时数据存放位置,可指定多个位置 namenode宕机时挽救数据措施之一 -->
+		<property>
+			<name>dfs.namenode.name.dir</name>
+			<value>/root/data/hadoop/data/name</value>
+		</property>
+		<!--datanode运行时数据存放位置-->
+		<property>
+			<name>dfs.datanode.data.dir</name>
+			<value>/root/data/hadoop/data/data</value>
+		</property>
+
+
+		<!-- 指定HDFS副本的数量(包括原本)-->
+		<property>
+		       <name>dfs.replication</name>
+		       <value>1</value>
+		</property> 
+		<!-- 指定SecondaryNamenode地址-->   
+		<property>
+		       <name>dfs.secondary.http.address</name>
+		       <value>linux-2:50090</value>
+		</property>
+		<!-- 如果使用yes，标示使用权限系统，如果是no，则关闭权限检查。但是其他的行为不会被改变。切换参数不会改变文件的mode，组和所有者。不管权限是否打开 chmod, chgrp和chown总是检查权限， 这些函数只对权限上下文有作用所以没有版本兼容问题。此外这允许管理员设置所有者开启权限检查功能  -->
+	<!--	<property>
+        		<name>dfs.permissions</name>
+        		<value>false</value>
+		</property>  -->
+</configuration>

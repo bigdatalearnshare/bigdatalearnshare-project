@@ -6,7 +6,11 @@
 
     <groupId>tech.bigdatalearnshare</groupId>
     <artifactId>bigdata-project</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spark-recommendation-system</module>
+    </modules>
 
 
     <name>BigdataLearnShare Project</name>

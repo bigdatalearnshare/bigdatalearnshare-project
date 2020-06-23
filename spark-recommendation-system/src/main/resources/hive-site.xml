@@ -1,0 +1,7 @@
+
+<configuration>
+	<property>
+		<name>hive.metastore.uris</name>
+		<value>thrift://linux-2:9083</value>
+	</property>
+</configuration>
