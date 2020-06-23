@@ -4,6 +4,7 @@ import java.io.File
 
 import org.apache.log4j.PropertyConfigurator
 import org.slf4j.LoggerFactory
+import tech.bigdatalearnshare.recommendation.producer.ProducerJ
 import tech.bigdatalearnshare.recommendation.utils.{Const, SpringUtils}
 
 object Bootstrap {
@@ -22,7 +23,8 @@ object Bootstrap {
   private def init(): Unit = {
     try {
       SpringUtils.init(Array[String]("applicationContext-send.xml"))
-
+      val producer = SpringUtils.getBean("producerJ", classOf[ProducerJ])
+      producer.work()
       //initLog4j();
     } catch {
       case e: Exception => e.printStackTrace()
