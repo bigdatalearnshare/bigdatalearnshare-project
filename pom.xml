@@ -37,7 +37,7 @@
         <hbase.version>1.2.6</hbase.version>
 
 
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <mysql.version>5.1.31</mysql.version>
         <json4s.version>3.5.3</json4s.version>
         <druid.version>1.1.21</druid.version>
