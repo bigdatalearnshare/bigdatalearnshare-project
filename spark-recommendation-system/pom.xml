@@ -29,7 +29,7 @@
         <commons-codec.version>1.9</commons-codec.version>
         <jedis.version>2.8.1</jedis.version>
         <activemq.version>5.12.0</activemq.version>
-        <jackson.version>2.9.10.5</jackson.version>
+        <jackson.version>2.9.10.7</jackson.version>
         <spring.version>5.2.7.RELEASE</spring.version>
     </properties>
     <dependencies>
