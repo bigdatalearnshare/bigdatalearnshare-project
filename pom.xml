@@ -44,7 +44,7 @@
         <fastjson.version>1.2.61</fastjson.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
 
-        <spring.version>5.2.7.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
 
     </properties>
 
