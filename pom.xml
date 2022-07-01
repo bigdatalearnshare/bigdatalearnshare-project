@@ -32,7 +32,7 @@
         <scala.binary.version>2.11</scala.binary.version>
 
         <spark.version>2.4.3</spark.version>
-        <hadoop-client-version>2.6.5</hadoop-client-version>
+        <hadoop-client-version>2.7.0</hadoop-client-version>
 
         <hbase.version>1.2.6</hbase.version>
 
